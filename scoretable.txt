@@ -1,0 +1,8 @@
+Name , Score , Location of Death
+
+test1,220,Exit
+test2,85,Exit Door - No Code
+test3,0,woods
+test4,50,Right of Main Door
+Tom,85,Upstairs Landing
+tom,85,Upstairs Landing
