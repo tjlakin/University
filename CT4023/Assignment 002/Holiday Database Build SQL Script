@@ -1,0 +1,74 @@
+-- tblHol_Detail
+DROP TABLE tblHol_Detail CASCADE CONSTRAINTS;
+CREATE TABLE tblHol_Detail (
+	Hol_Code VARCHAR2(2) NOT NULL,
+	Country_Visit VARCHAR2(100) NOT NULL,
+	Duration NUMBER(3) NOT NULL,
+	Dif_Rate_Code VARCHAR2(1) NOT NULL,
+	Hol_Description VARCHAR2(100) NOT NULL,
+	Cost NUMBER(5,2) NOT NULL
+);
+
+ALTER TABLE tblHol_Detail
+	ADD CONSTRAINT pk_tblHol_Detail PRIMARY KEY (Hol_Code);
+	
+--tblDiff_Rate_Detail
+DROP TABLE tblDiff_Rate_Detail CASCADE CONSTRAINTS;
+CREATE TABLE tblDiff_Rate_Detail (
+	Dif_Rate_Code VARCHAR2(1) NOT NULL,
+	Dif_Description VARCHAR2 (25) NOT NULL
+);
+
+ALTER TABLE tblDiff_Rate_Detail
+	ADD CONSTRAINT pk_tblDiff_Rate_Detail PRIMARY KEY (Dif_Rate_Code);
+
+-- tblDeparture_Date	
+DROP TABLE tblDeparture_Date CASCADE CONSTRAINTS;
+CREATE TABLE tblDeparture_Date (
+	Departure_Date DATE NOT NULL,
+	Hol_Code VARCHAR2(2) NOT NULL
+);
+
+ALTER TABLE tblDeparture_Date
+	ADD CONSTRAINT pk_tblDeparture_Date PRIMARY KEY (Departure_Date, Hol_Code);
+
+-- tblSites_Visited	
+DROP TABLE tblSites_Visited CASCADE CONSTRAINTS;
+CREATE TABLE tblSites_Visited (
+	Site_Code NUMBER(3) NOT NULL,
+	Hol_Code VARCHAR2(2) NOT NULL
+);
+
+ALTER TABLE tblSites_Visited
+	ADD CONSTRAINT pk_tblSites_Visited PRIMARY KEY (Site_Code, Hol_Code);
+
+-- tblSites_Aval	
+DROP TABLE tblSites_Aval CASCADE CONSTRAINTS;
+CREATE TABLE tblSites_Aval (
+	Site_Code NUMBER(3) NOT NULL,
+	Site_Name VARCHAR2(200) NOT NULL
+);
+
+ALTER TABLE tblSites_Aval
+	ADD CONSTRAINT pk_tblSites_Aval PRIMARY KEY (Site_Code);
+	
+-- Foreign Keys
+
+ALTER TABLE tblHol_Detail
+	ADD CONSTRAINT fk_tblDiff_Rate_Det_tblHol_Det
+	FOREIGN KEY (Dif_Rate_Code)
+	REFERENCES tblDiff_Rate_Detail (Dif_Rate_Code);
+
+ALTER TABLE tblDeparture_Date
+	ADD CONSTRAINT fk_tblHol_Det_tblDepature_Date
+	FOREIGN KEY (Hol_Code)
+	REFERENCES tblHol_Detail (Hol_Code);
+
+ALTER TABLE tblSites_Visited
+	ADD CONSTRAINT fk1_tblSite_Aval_tblSite_Visit
+	FOREIGN KEY (Site_Code)
+	REFERENCES tblSites_Aval (Site_Code);
+ALTER TABLE tblSites_Visited
+	ADD CONSTRAINT fk2_tblSite_Aval_tblHol_Detail
+	FOREIGN KEY (Hol_Code)
+	REFERENCES tblHol_Detail (Hol_Code)
