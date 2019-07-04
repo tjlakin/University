@@ -1,0 +1,367 @@
+-- Insert Data into the tables 
+
+-- tblHol_Detail
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H4', 'China', '21', 'C', 'Olympic Sites', '£2108'); 
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H7', 'USA', '10', 'B', 'Western Parks', '£749');
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H3', 'USA', '16', 'E', 'Yellowstone', '£1021');
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H1', 'India', '10', 'B', 'Moghul Sites', '£1095'); 
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H9', 'Spain', '15', 'B', 'Andalusian Walks', '£851');  	
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H5', 'India', '21', 'C', 'Tiger Safari', '£2100');
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H6', 'China', '11', 'B', 'China Highlights', '£1201'); 
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H2', 'USA', '21', 'C', 'Western National Parks', '£1400'); 
+INSERT INTO tblHol_Detail
+	(Hol_Code, Country_Visit, Duration, Dif_Rate_Code, Hol_Description, Cost)
+	VALUES
+	('H8', 'Spain', '8', 'A', 'Andalusian Towns', '£647'); 
+
+-- tblDiff_Rate_Detail
+INSERT INTO tblDiff_Rate_Detail
+	(Dif_Rate_Code, Dif_Description)
+	VALUES
+	('A', 'Easy');
+INSERT INTO tblDiff_Rate_Detail
+	(Dif_Rate_Code, Dif_Description)
+	VALUES
+	('B', 'Moderate');
+INSERT INTO tblDiff_Rate_Detail
+	(Dif_Rate_Code, Dif_Description)
+	VALUES
+	('C', 'Strenuous');
+INSERT INTO tblDiff_Rate_Detail
+	(Dif_Rate_Code, Dif_Description)
+	VALUES
+	('D', 'Tough');
+INSERT INTO tblDiff_Rate_Detail
+	(Dif_Rate_Code, Dif_Description)
+	VALUES
+	('E', 'Very Stenuous');
+
+--tblDepature_Date
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('10/17/2014', 'H1');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('11/20/2014', 'H1');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('12/30/2014', 'H1');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('11/01/2014', 'H2');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('12/01/2014', 'H3');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('01/01/2015', 'H4');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('02/01/2015', 'H5');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('03/01/2015', 'H5');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('11/22/2014', 'H8');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('12/17/2014', 'H8');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('06/29/2015', 'H2');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('10/01/2014', 'H6');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('12/19/2015', 'H7');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('09/01/2014', 'H1');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('06/01/2015', 'H9');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('04/01/2015', 'H3');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('03/12/2015', 'H2');
+INSERT INTO tblDepature_Date
+	(Departure_Date, Hol_Code)
+	VALUES
+	('05/01/2015', 'H1');
+
+-- tblSites_Visited
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('101', 'H7');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('104', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('114', 'H1');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('101', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('116', 'H6');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('111', 'H7');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('124', 'H1');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('109', 'H7');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('116', 'H4');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('122', 'H9');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('121', 'H9');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('120', 'H9');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('103', 'H9');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('103', 'H8');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('119', 'H9');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('106', 'H1');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('115', 'H5');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('117', 'H4');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('108', 'H3');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('113', 'H5');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('102', 'H6');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('112', 'H4');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('123', 'H4');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('112', 'H6');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('105', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('111', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('120', 'H8');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('105', 'H7');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('107', 'H7');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('107', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('124', 'H5');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('109', 'H2');
+INSERT INTO tblSites_Visited
+	(Site_Code, Hol_Code)
+	VALUES
+	('119', 'H8');
+
+-- tblSites_Aval
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('101','Yosemite National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('102','Xian');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('103','Seville');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('104','Grand Canyon');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('105','San Francisco');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('106','Taj Mahal');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('107','Zion National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('108','Yellowstone National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('109','Arches National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('110','Granada');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('111','Los Angeles');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('112','Easten Qing Tombs');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('113','Ranthambhore National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('114','Jaipur');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('115','Bandhavgarh National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('116','Beijing');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('117','Shanhaiguan');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('118','Oorty');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('119','Malaga');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('120','Cordoba');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('121','Grazalema National Park');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('122','Sierra de Cazorla');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('123','Jinshanling');
+INSERT INTO tblSites_Aval
+	(Site_Code, Site_Name)
+	VALUES
+	('124','Delhi');
