@@ -1,7 +1,5 @@
 # University
-All code from my time at University (Mainly written in Python, HTML, CSS, Javacript and SQL)
-
-CT4009 - Intoduction to Web Development (HTML, CSS and Javascipt)
+All code from my time at University (Mainly written in Python, C and SQL)
 
 CT4021 - Introduction to Programming Fundementals (Python and C)
 
