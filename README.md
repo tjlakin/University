@@ -1,5 +1,5 @@
 # University
-All code from my time at University (Mainly written in Python, C and SQL)
+All code from my time at University (Mainly written in Python, C/C++ and SQL)
 
 CT4021 - Introduction to Programming Fundementals (Python and C)
 
