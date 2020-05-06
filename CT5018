@@ -1,0 +1,172 @@
+import csv
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from pandas.plotting import scatter_matrix
+import seaborn as sns
+from scipy.stats import ttest_1samp
+
+
+# Files for each month containing the data
+Jan = pd.read_csv('Burglary&CDConvicJan.csv', delimiter=',', index_col=0)
+Feb = pd.read_csv('Burglary&CDConvicFeb.csv', delimiter=',', index_col=0)
+Mar = pd.read_csv('Burglary&CDConvicMar.csv', delimiter=',', index_col=0)
+Apr = pd.read_csv('Burglary&CDConvicApr.csv', delimiter=',', index_col=0)
+May = pd.read_csv('Burglary&CDConvicMay.csv', delimiter=',', index_col=0)
+Jun = pd.read_csv('Burglary&CDConvicJun.csv', delimiter=',', index_col=0)
+Jul = pd.read_csv('Burglary&CDConvicJul.csv', delimiter=',', index_col=0)
+Aug = pd.read_csv('Burglary&CDConvicAug.csv', delimiter=',', index_col=0)
+Sep = pd.read_csv('Burglary&CDConvicSep.csv', delimiter=',', index_col=0)
+Oct = pd.read_csv('Burglary&CDConvicOct.csv', delimiter=',', index_col=0)
+Nov = pd.read_csv('Burglary&CDConvicNov.csv', delimiter=',', index_col=0)
+Dec = pd.read_csv('Burglary&CDConvicDec.csv', delimiter=',', index_col=0)
+Nat = pd.read_csv('Burglary&CDConvicNational.csv', delimiter=',', index_col=0)
+
+# Bar charts Comparing Burglary and CD convictions in the Same Months 1 Year Apart
+# (Months which data is used for a 12 month comparison)
+
+# January
+Jan.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in January 2014/January 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# February
+Feb.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in February 2014/February 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# March
+Mar.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in March 2014/March 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# April
+Apr.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in April 2014/April 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# May
+May.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in May 2014/May 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# June
+Jun.plot(kind='bar', width=0.8)
+plt.ylabel('Number of Convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.title('Burglary and Criminal Damage Convictions in June 2014/June 2015')
+plt.legend(['Burglary-14', 'CD-14','Burglary-15', 'CD-15'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# Line Graphs comparing the number of burglary convictions to the number of CD convictions
+# (Months where there is only one months worth of data in the 18 months)
+
+# July
+plt.plot(Jul)
+plt.title('Convictions for Burglary and Criminal Damage in July 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# August
+plt.plot(Aug)
+plt.title('Convictions for Burglary and Criminal Damage in August 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# September
+plt.plot(Sep)
+plt.title('Convictions for Burglary and Criminal Damage in September 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# October
+plt.plot(Oct)
+plt.title('Convictions for Burglary and Criminal Damage in October 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# November
+plt.plot(Nov)
+plt.title('Convictions for Burglary and Criminal Damage in November 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# December
+plt.plot(Dec)
+plt.title('Convictions for Burglary and Criminal Damage in December 2014')
+plt.ylabel('Number of convictions')
+plt.xlabel('Location')
+plt.xticks(fontsize=5, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='upper left', ncol=1)
+plt.show()
+
+# Line Graph showing the national number of burglary and criminal damage convictions over the 18 month period
+plt.plot(Nat)
+plt.title('National Convictions for Burglary and Criminal Damage over 18 months')
+plt.ylabel('Number of convictions')
+plt.xlabel('Month and Year')
+plt.xticks(fontsize=10, rotation=90)
+plt.legend(['Burglary', 'Criminal Damage'], frameon=False, loc='lower center', ncol=2)
+plt.show()
+
+#Scatter Matrix
+scatter_matrix(Nat, alpha=0.2, diagonal='kde', color = 'g')
+plt.show()
+
+
+#Correlation
+cormatrix = Nat.corr()
+
+cormatrix = cormatrix.stack()
+cormatrix = cormatrix.reindex(cormatrix.abs().sort_values(ascending=False).index).reset_index()
+cormatrix.columns = ["Variable 1", "Variable 2", "Correlation"]
+print(cormatrix)
+
+#T-Score
+print("")
+nat_Mean = np.mean(Nat)
+print("Mean Values")
+print(nat_Mean)
+print("")
+tset, pval = ttest_1samp(Nat,2)
+print("p-values",pval)
+if (pval < 0.05).all():
+    print("The Null Hypothesis Should Be Rejected")
+else:
+    print("The Null Hypothesis Should Be Accepted")
